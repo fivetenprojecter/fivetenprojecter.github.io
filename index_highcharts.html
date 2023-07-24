@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<html>
+<head><meta charset="utf-8" /></head>
+<body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<div id="container" style="width:100%; height:800px;"></div>
+
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+Highcharts.chart('container',
+{
+  chart: {
+  plotBorderWidth: 1,
+  type: 'bubble'
+},
+  legend: {
+  align: 'right',
+  borderRadius: 1,
+  bubbleLegend: {
+  borderWidth: 3,
+  connectorDistance: 40,
+  connectorWidth: 3,
+  enabled: true,
+  labels: {
+  align: 'left',
+  format: '{value:,.0f} TJ'
+},
+  legendIndex: 0,
+  maxSize: 100,
+  minSize: 1,
+  ranges: [{
+  value: 1
+},
+{
+  value: 20
+},
+{
+  value: 150
+}]
+},
+  enabled: true,
+  itemMarginTop: 5,
+  layout: 'vertical',
+  title: {
+  text: 'Size indicates total energy consumption <br/><span style="font-size: 9px; color: #666; font-weight: normal">(Click on region to hide)</span>'
+},
+  verticalAlign: 'top'
+},
+  plotOptions: {
+  series: {
+  dataLabels: {
+  enabled: true,
+  format: '{point.name}'
+},
+  type: 'series'
+}
+},
+  series: [{
+  data: [{
+  z: 11.8766843,
+  x: 42.366487144598004,
+  y: 17.38427847240159,
+  color: '#116466',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||| 75.3% Fossil<br>|| 9.0% Nuclear<br>| 0.0% Heat<br>||| 17.4% Renew.<br>',
+  'renew_deployed': 2.0646758719999996
+},
+  name: 'Canada'
+},
+{
+  z: 85.32357640000001,
+  x: 58.451606715244296,
+  y: 8.657857779388628,
+  color: '#116466',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||| 80.6% Fossil<br>|| 10.5% Nuclear<br>| 0.0% Heat<br>|| 8.7% Renew.<br>',
+  'renew_deployed': 7.387193897
+},
+  name: 'United States'
+}],
+  name: 'North America',
+  maxSize: 100,
+  minSize: 1,
+  color: '#116466',
+  type: 'bubble'
+},
+{
+  data: [{
+  z: 3.0907105440000002,
+  x: 11.3412683655863,
+  y: 8.507499131888942,
+  color: '#E8A87C',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||||| 87.2% Fossil<br>| 3.8% Nuclear<br>| 0.0% Heat<br>|| 8.5% Renew.<br>',
+  'renew_deployed': 0.26294217270000003
+},
+  name: 'Argentina'
+},
+{
+  z: 11.984026320000002,
+  x: 8.25556706360422,
+  y: 48.05579242920087,
+  color: '#E8A87C',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||| 49.9% Fossil<br>| 1.3% Nuclear<br>| 0.0% Heat<br>|||||| 48.1% Renew.<br>',
+  'renew_deployed': 5.759018813
+},
+  name: 'Brazil'
+},
+{
+  z: 1.58885348,
+  x: 12.7411575074464,
+  y: 29.516170987648277,
+  color: '#E8A87C',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 70.5% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|||| 29.5% Renew.<br>',
+  'renew_deployed': 0.4689687099
+},
+  name: 'Chile'
+},
+{
+  z: 1.6777585160000001,
+  x: 5.85298323540012,
+  y: 24.334676308089144,
+  color: '#E8A87C',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||| 75.4% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>||| 24.3% Renew.<br>',
+  'renew_deployed': 0.40827710409999995
+},
+  name: 'Colombia'
+},
+{
+  z: 0.2000807662,
+  x: 12.030048593824,
+  y: 53.953380402438704,
+  color: '#E8A87C',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||| 47.0% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|||||| 54.0% Renew.<br>',
+  'renew_deployed': 0.1079503369
+},
+  name: 'Costa Rica'
+},
+{
+  z: 7.406647399000001,
+  x: 9.14707274359347,
+  y: 9.302339646855922,
+  color: '#E8A87C',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||||| 89.3% Fossil<br>| 1.2% Nuclear<br>| 0.0% Heat<br>|| 9.3% Renew.<br>',
+  'renew_deployed': 0.6889914975
+},
+  name: 'Mexico'
+}],
+  name: 'Latin America & Caribbean',
+  maxSize: 100,
+  minSize: 1,
+  color: '#E8A87C',
+  type: 'bubble'
+},
+{
+  data: [{
+  z: 1.319517059,
+  x: 43.455700066573804,
+  y: 34.144577133504114,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 65.2% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|||| 34.1% Renew.<br>',
+  'renew_deployed': 0.45054352
+},
+  name: 'Austria'
+},
+{
+  z: 2.106853633,
+  x: 40.6201042151159,
+  y: 10.751929282217965,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 71.0% Fossil<br>||| 17.8% Nuclear<br>| 0.5% Heat<br>|| 10.8% Renew.<br>',
+  'renew_deployed': 0.2265274127
+},
+  name: 'Belgium'
+},
+{
+  z: 0.9717073196,
+  x: 84.4347784901292,
+  y: 27.51439790636316,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||| 47.4% Fossil<br>|||| 27.1% Nuclear<br>| 0.0% Heat<br>|||| 27.5% Renew.<br>',
+  'renew_deployed': 0.2673594184
+},
+  name: 'Switzerland'
+},
+{
+  z: 1.682355999,
+  x: 19.0480868543829,
+  y: 13.085513715934981,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 69.5% Fossil<br>||| 19.5% Nuclear<br>| 0.0% Heat<br>|| 13.1% Renew.<br>',
+  'renew_deployed': 0.220144925
+},
+  name: 'Czech Republic'
+},
+{
+  z: 11.65431423,
+  x: 41.6504227126493,
+  y: 17.874662832048934,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||| 76.7% Fossil<br>|| 6.0% Nuclear<br>| 0.0% Heat<br>||| 17.9% Renew.<br>',
+  'renew_deployed': 2.083169374
+},
+  name: 'Germany'
+},
+{
+  z: 0.6380606706999999,
+  x: 55.8987900294456,
+  y: 41.406493760249255,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||| 54.5% Fossil<br>| 0.0% Nuclear<br>| 0.2% Heat<br>||||| 41.4% Renew.<br>',
+  'renew_deployed': 0.2641985518
+},
+  name: 'Denmark'
+},
+{
+  z: 4.567702386,
+  x: 24.785446714692,
+  y: 17.11642746025441,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 68.7% Fossil<br>|| 13.9% Nuclear<br>| 0.0% Heat<br>||| 17.1% Renew.<br>',
+  'renew_deployed': 0.7818274655
+},
+  name: 'Spain'
+},
+{
+  z: 0.1871426373,
+  x: 20.1181050729983,
+  y: 30.078684730601477,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||| 62.9% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|||| 30.1% Renew.<br>',
+  'renew_deployed': 0.05629004387
+},
+  name: 'Estonia'
+},
+{
+  z: 1.328539114,
+  x: 44.9847344505487,
+  y: 37.00971621525025,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||| 39.3% Fossil<br>||| 19.1% Nuclear<br>| 0.5% Heat<br>||||| 37.0% Renew.<br>',
+  'renew_deployed': 0.4916885559
+},
+  name: 'Finland'
+},
+{
+  z: 9.138973738999999,
+  x: 35.712075198682804,
+  y: 12.596248428720868,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||| 46.9% Fossil<br>||||| 42.2% Nuclear<br>| 0.0% Heat<br>|| 12.6% Renew.<br>',
+  'renew_deployed': 1.1511678360000002
+},
+  name: 'France'
+},
+{
+  z: 6.444334346,
+  x: 42.098602930166,
+  y: 14.65721507274508,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||| 75.8% Fossil<br>|| 8.5% Nuclear<br>| 0.0% Heat<br>|| 14.7% Renew.<br>',
+  'renew_deployed': 0.9445599451000001
+},
+  name: 'United Kingdom'
+},
+{
+  z: 0.8244146237,
+  x: 48.139583802873105,
+  y: 14.96375440871501,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||| 81.2% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|| 15.0% Renew.<br>',
+  'renew_deployed': 0.1233633796
+},
+  name: 'Greece'
+},
+{
+  z: 1.0991675250000001,
+  x: 14.4304768288416,
+  y: 12.31707553405019,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 67.9% Fossil<br>||| 16.0% Nuclear<br>| 0.0% Heat<br>|| 12.3% Renew.<br>',
+  'renew_deployed': 0.1353852943
+},
+  name: 'Hungary'
+},
+{
+  z: 0.5530336458,
+  x: 79.07454013508939,
+  y: 14.051945428669974,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||||| 86.0% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|| 14.1% Renew.<br>',
+  'renew_deployed': 0.07771198610999999
+},
+  name: 'Ireland'
+},
+{
+  z: 0.2473163694,
+  x: 52.442361774292095,
+  y: 89.46731784750192,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|| 10.5% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|||||||||| 89.5% Renew.<br>',
+  'renew_deployed': 0.22126732229999999
+},
+  name: 'Iceland'
+},
+{
+  z: 5.756348853,
+  x: 29.3734450918601,
+  y: 20.408720110625996,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||| 77.6% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>||| 20.4% Renew.<br>',
+  'renew_deployed': 1.1747971259999999
+},
+  name: 'Italy'
+},
+{
+  z: 0.31234417280000004,
+  x: 17.241295231239,
+  y: 22.574251367624683,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 65.7% Fossil<br>| 0.0% Nuclear<br>| 2.6% Heat<br>||| 22.6% Renew.<br>',
+  'renew_deployed': 0.07050935870000001
+},
+  name: 'Lithuania'
+},
+{
+  z: 0.14339394770000002,
+  x: 104.12824211103701,
+  y: 12.815328397573643,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 73.5% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|| 12.8% Renew.<br>',
+  'renew_deployed': 0.0183764053
+},
+  name: 'Luxembourg'
+},
+{
+  z: 0.17911707759999998,
+  x: 15.826412657852899,
+  y: 43.492354466596105,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||| 53.2% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>||||| 43.5% Renew.<br>',
+  'renew_deployed': 0.0779022343
+},
+  name: 'Latvia'
+},
+{
+  z: 2.9028332150000002,
+  x: 46.30321886247,
+  y: 10.523648166262284,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||||| 87.8% Fossil<br>| 1.5% Nuclear<br>| 0.4% Heat<br>|| 10.5% Renew.<br>',
+  'renew_deployed': 0.30548395440000004
+},
+  name: 'Netherlands'
+},
+{
+  z: 1.149606043,
+  x: 75.2872059530897,
+  y: 54.33644690749073,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||| 51.7% Fossil<br>| 0.0% Nuclear<br>| 0.4% Heat<br>|||||| 54.3% Renew.<br>',
+  'renew_deployed': 0.6246550772
+},
+  name: 'Norway'
+},
+{
+  z: 4.260205356,
+  x: 14.774989199306999,
+  y: 13.485404624706074,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||||| 85.4% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|| 13.5% Renew.<br>',
+  'renew_deployed': 0.5745059301
+},
+  name: 'Poland'
+},
+{
+  z: 0.8433611037,
+  x: 19.802229021216498,
+  y: 28.982538491240124,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 70.4% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|||| 29.0% Renew.<br>',
+  'renew_deployed': 0.2444274565
+},
+  name: 'Portugal'
+},
+{
+  z: 0.6928118228,
+  x: 17.617049313455997,
+  y: 14.082395675017917,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||| 61.2% Fossil<br>||| 24.6% Nuclear<br>| 0.0% Heat<br>|| 14.1% Renew.<br>',
+  'renew_deployed': 0.09756450217
+},
+  name: 'Slovak Republic'
+},
+{
+  z: 0.2693266701,
+  x: 22.9287627401934,
+  y: 18.439379877069218,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||| 58.5% Fossil<br>|||| 25.7% Nuclear<br>| 0.0% Heat<br>||| 18.4% Renew.<br>',
+  'renew_deployed': 0.04966216781
+},
+  name: 'Slovenia'
+},
+{
+  z: 1.877231141,
+  x: 51.9526731328342,
+  y: 51.11807907623028,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||| 24.6% Fossil<br>|||| 28.6% Nuclear<br>| 0.5% Heat<br>|||||| 51.1% Renew.<br>',
+  'renew_deployed': 0.9596044991
+},
+  name: 'Sweden'
+},
+{
+  z: 6.1514439130000005,
+  x: 12.0723994354645,
+  y: 17.437021359053393,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||| 82.6% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>||| 17.4% Renew.<br>',
+  'renew_deployed': 1.072628589
+},
+  name: 'Republic of Turkiye'
+},
+{
+  z: 3.6158455309999997,
+  x: 2.35040014648438,
+  y: 6.585587311694262,
+  color: '#4D6D9A',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 70.4% Fossil<br>||| 23.2% Nuclear<br>| 0.1% Heat<br>|| 6.6% Renew.<br>',
+  'renew_deployed': 0.2381246645
+},
+  name: 'Ukraine'
+}],
+  name: 'Europe & Central Asia',
+  maxSize: 100,
+  minSize: 1,
+  color: '#4D6D9A',
+  type: 'bubble'
+},
+{
+  data: [{
+  z: 3.6711140799999997,
+  x: 3.83578421489789,
+  y: 6.207176631786938,
+  color: '#41B3A3',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||||| 93.9% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|| 6.2% Renew.<br>',
+  'renew_deployed': 0.2278725353
+},
+  name: 'Egypt'
+},
+{
+  z: 0.8833128137,
+  x: 38.1767543372587,
+  y: 4.863236794908504,
+  color: '#41B3A3',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||||| 97.7% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>| 4.9% Renew.<br>',
+  'renew_deployed': 0.042957593770000004
+},
+  name: 'Israel'
+},
+{
+  z: 0.8810851431,
+  x: 3.08136743164063,
+  y: 9.738275634533283,
+  color: '#41B3A3',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||||| 90.2% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|| 9.7% Renew.<br>',
+  'renew_deployed': 0.08580249981
+},
+  name: 'Morocco'
+}],
+  name: 'Middle East & North Africa',
+  maxSize: 100,
+  minSize: 1,
+  color: '#41B3A3',
+  type: 'bubble'
+},
+{
+  data: [{
+  z: 5.218664493,
+  x: 5.72626277496798,
+  y: 6.208590094929485,
+  color: '#85CDCA',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||||| 92.0% Fossil<br>| 2.1% Nuclear<br>| 0.0% Heat<br>|| 6.2% Renew.<br>',
+  'renew_deployed': 0.3240054868
+},
+  name: 'South Africa'
+}],
+  name: 'Sub-Saharan Africa',
+  maxSize: 100,
+  minSize: 1,
+  color: '#85CDCA',
+  type: 'bubble'
+},
+{
+  data: [{
+  z: 36.51990903,
+  x: 1.81353454174728,
+  y: 25.455338767036352,
+  color: '#E27D60',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 73.3% Fossil<br>| 1.3% Nuclear<br>| 0.0% Heat<br>|||| 25.5% Renew.<br>',
+  'renew_deployed': 9.296266561
+},
+  name: 'India'
+}],
+  name: 'South Asia',
+  maxSize: 100,
+  minSize: 1,
+  color: '#E27D60',
+  type: 'bubble'
+},
+{
+  data: [{
+  z: 5.484787528,
+  x: 58.115930667510895,
+  y: 7.629217849621685,
+  color: '#C38D9E',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||||| 92.4% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|| 7.6% Renew.<br>',
+  'renew_deployed': 0.4184463891
+},
+  name: 'Australia'
+},
+{
+  z: 146.51625529999998,
+  x: 10.358170541108601,
+  y: 10.125560805265819,
+  color: '#C38D9E',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||||| 87.2% Fossil<br>| 2.7% Nuclear<br>| 0.0% Heat<br>|| 10.1% Renew.<br>',
+  'renew_deployed': 14.83559252
+},
+  name: 'People\'s Republic of China'
+},
+{
+  z: 9.771152291,
+  x: 3.78012163455478,
+  y: 26.7483695286108,
+  color: '#C38D9E',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||| 73.2% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>|||| 26.7% Renew.<br>',
+  'renew_deployed': 2.6136239220000004
+},
+  name: 'Indonesia'
+},
+{
+  z: 16.108884879999998,
+  x: 34.6032650564305,
+  y: 8.444543505856874,
+  color: '#C38D9E',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>|||||||||| 88.9% Fossil<br>| 2.6% Nuclear<br>| 0.0% Heat<br>|| 8.4% Renew.<br>',
+  'renew_deployed': 1.360321792
+},
+  name: 'Japan'
+},
+{
+  z: 11.559800919999999,
+  x: 31.3724712614515,
+  y: 3.354821747224346,
+  color: '#C38D9E',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||| 81.5% Fossil<br>||| 15.1% Nuclear<br>| 0.0% Heat<br>| 3.4% Renew.<br>',
+  'renew_deployed': 0.3878107152
+},
+  name: 'Korea'
+},
+{
+  z: 0.8236492558,
+  x: 39.607878927006595,
+  y: 41.02197152740996,
+  color: '#C38D9E',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||| 59.0% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>||||| 41.0% Renew.<br>',
+  'renew_deployed': 0.3378771632
+},
+  name: 'New Zealand'
+},
+{
+  z: 1.3445363460000002,
+  x: 59.175811041213706,
+  y: 2.088594658191561,
+  color: '#C38D9E',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||||| 97.9% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>| 2.1% Renew.<br>',
+  'renew_deployed': 0.0280819143
+},
+  name: 'Singapore'
+},
+{
+  z: 5.573232577,
+  x: 6.0481003283375205,
+  y: 18.120566332862733,
+  color: '#C38D9E',
+  custom: {
+  'mix_string': '<b>Energy mix</b><br>||||||||| 80.1% Fossil<br>| 0.0% Nuclear<br>| 0.0% Heat<br>||| 18.1% Renew.<br>',
+  'renew_deployed': 1.009901306
+},
+  name: 'Thailand'
+}],
+  name: 'East Asia & Pacific',
+  maxSize: 100,
+  minSize: 1,
+  color: '#C38D9E',
+  type: 'bubble'
+}],
+  subtitle: {
+  align: 'left',
+  text: 'Fraction of total energy supply provided by renewable & waste in each country in 2020 [Source: <a href="https://www.iea.org/data-and-statistics/data-product/world-energy-balances-highlights">IEA</a> and <a href="https://databank.worldbank.org/reports.aspx?source=2&series=NY.GDP.MKTP.CD&country=#">World Bank</a>]'
+},
+  title: {
+  align: 'left',
+  text: 'Economic development does not necessarily drive renewable energy uptake'
+},
+  tooltip: {
+  followPointer: true,
+  footerFormat: ``,
+  pointFormat: '<b>{point.name}</b><br>GDP per capita: US${point.x:.0f}000<br>Total energy supply: {point.z:.1f} TJ <br>Renewable & waste production: {point.custom.renew_deployed:.1f} TJ<br>Renewable & waste fraction: {point.y:.1f}%<br><br> {point.custom.mix_string}',
+  useHTML: true
+},
+  xAxis: {
+  lineWidth: 2.5,
+  gridLineWidth: 1.5,
+  labels: {
+  format: '{value:,.0f} '
+},
+  minorTickInterval: 0.1,
+  title: {
+  text: 'GDP per capita (1000s of constant 2015 US$)'
+},
+  type: 'logarithmic'
+},
+  yAxis: {
+  endOnTick: false,
+  labels: {
+  format: '{value}%'
+},
+  maxPadding: 0.2,
+  startOnTick: false,
+  title: {
+  text: 'Renewable & waste fraction of total energy supply'
+}
+}
+},
+);
+});
+</script>
+
+</body>
+</html>
